@@ -22,7 +22,7 @@ class Contents:
 
         file = gzip.decompress(response.content)  # decompress
 
-        return file.decode()  # deocde bytes -> string
+        return file.decode()  # decode bytes -> string
 
     def parse(self, file: str) -> list:
         """
