@@ -1,5 +1,9 @@
 # Coding Test
 
+## Command
+
+`make start`
+
 ## Approach and Thought Process
 
 - Identified from instructions that functionalities of the tool are architecture (input), download, parse and statistics (output)
@@ -34,6 +38,8 @@
 
 - Organized work from notebook into file dir structure
 
+- Added tests and containerized the tool
+
 ## Completion Time
 
-~ 3 hrs 30 mins
+~ 4 hrs 15 mins

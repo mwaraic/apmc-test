@@ -1,0 +1,10 @@
+  package_name  number_of_files
+   btrfs-progs                8
+         abpoa                7
+          bash                1
+   bash-static                1
+        brltty                1
+       busybox                1
+busybox-static                1
+         bzip2                1
+           csh                1

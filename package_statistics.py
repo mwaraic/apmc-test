@@ -4,19 +4,19 @@ import sys
 
 def run(architecture: str):
     """
-    Run statistics workload
+    Run workload
     """
     obj = Contents(architecture=architecture)  # initialize Contents obj
 
     try:
-        file = obj.download()  # download file
+        file = obj.download()
     except Exception:
         print('architecture not found')  # console error
         sys.exit()  # exit
 
-    data = obj.parse(file)  # parse file
+    data = obj.parse(file)
 
-    df = obj.transform(data)  # transform table
+    df = obj.transform(data)
 
     print(obj.statistics(df))  # console statistics
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
 
     args = sys.argv  # retrieve CLI args
 
-    run(architecture=args[1])  # run workload
+    run(architecture=args[1])
