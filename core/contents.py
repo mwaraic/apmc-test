@@ -4,21 +4,27 @@ import gzip
 
 
 class Contents:
+    """Contents class which contains functionalites to manipulate
+       Contents file from debian mirror
+
+    Args:
+        str: architecture
+    """
 
     BASE_URL = 'http://ftp.uk.debian.org/debian/dists/stable/main'
 
     def __init__(self, architecture: str):
-        """
-        Initialize Contents object
-        """
-        self.content = f'Contents-{architecture}.gz'
+
+        self.architecture = architecture
 
     def download(self) -> str:
         """
         Downloads compressed Contents file from a Debian mirror
         and decompresses it
         """
-        response = requests.get(f'{self.BASE_URL}/{self.content}')  # download
+        filename = f'Contents-{self.architecture}.gz'
+
+        response = requests.get(f'{self.BASE_URL}/{filename}')  # download
 
         file = gzip.decompress(response.content)  # decompress
 
